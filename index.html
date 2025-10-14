@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Drop Game</title>
+    <title>Water Can Catcher</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="game-wrapper">
         <!-- Charity: water logo -->
-        <img src="img/cw_logo-horizontal.png" alt="charity: water logo" class="cw-logo">
-        <h1 class="game-title">Water Drop</h1>
-        <p class="game-tagline">Catch the good drops, avoid the bad ones!</p>
+        <a href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer" class="cw-logo-link">
+            <img src="img/cw_logo-horizontal.png" alt="charity: water logo" class="cw-logo">
+        </a>
+        <h1 class="game-title">Water Can Catcher</h1>
+        <p class="game-tagline">Catch the good cans, avoid the bad ones!</p>
+        
+        <!-- Difficulty Selection -->
+        <div class="difficulty-panel">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="normal" selected>Normal</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        
         <div class="score-panel">
             <div class="score">Score: <span id="score">0</span></div>
             <div class="timer">Time: <span id="time">30</span>s</div>
-            <button id="start-btn">Start Game</button>
+            <div class="goal">Goal: <span id="goal">20</span></div>
+            <div class="button-group">
+                <button id="start-btn">Start Game</button>
+                <button id="reset-btn">Reset</button>
+            </div>
         </div>
         
         <div id="game-container">
@@ -25,8 +42,13 @@
         
         <!-- Footer with charity: water branding -->
         <div class="footer-branding">
-            <img src="img/cw_logo.png" alt="charity: water" class="footer-logo">
+            <a href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer">
+                <img src="img/cw_logo.png" alt="charity: water" class="footer-logo">
+            </a>
             <p class="footer-text">Every game played helps bring clean water to those in need</p>
+            <a href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer" class="donate-link">
+                Visit charity: water →
+            </a>
         </div>
     </div>
     
